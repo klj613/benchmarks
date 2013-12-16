@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp ../sources/cphalcon ./cphalcon -r
+docker build -t="klj613_benchmark/phalcon" .

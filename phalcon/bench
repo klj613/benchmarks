@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "----" >> results
+echo "php55u" >> results
+echo $(ab -n 1500 -c 50 http://localhost:49156/ | grep -i 'Requests per second' | awk '{print $4}') >> results
+
+sleep 10
+
+echo "----" >> results
+echo "php55u w/ opcache" >> results
+echo $(ab -n 1500 -c 50 http://localhost:49157/ | grep -i 'Requests per second' | awk '{print $4}') >> results
+
+sleep 10
+
+echo "----" >> results
+echo "php54" >> results
+echo $(ab -n 1500 -c 50 http://localhost:49158/ | grep -i 'Requests per second' | awk '{print $4}') >> results
+
+sleep 10
+
+echo "----" >> results
+echo "php54 w/ apc" >> results
+echo $(ab -n 1500 -c 50 http://localhost:49159/ | grep -i 'Requests per second' | awk '{print $4}') >> results
+
+sleep 10
+
+echo "----" >> results
+echo "php53u" >> results
+echo $(ab -n 1500 -c 50 http://localhost:49160/ | grep -i 'Requests per second' | awk '{print $4}') >> results
+
+sleep 10
+
+echo "----" >> results
+echo "php53u w/ apc" >> results
+echo $(ab -n 1500 -c 50 http://localhost:49161/ | grep -i 'Requests per second' | awk '{print $4}') >> results
