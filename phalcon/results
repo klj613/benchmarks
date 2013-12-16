@@ -1,21 +1,21 @@
 ----
 php55u
-3365.86
+3835.41
 ----
 php55u w/ opcache
-6039.98
+7398.14
 ----
 php54
-3587.99
+4094.78
 ----
 php54 w/ apc
-4992.36
+5820.57
 ----
 php53u
-3929.74
+4314.30
 ----
 php53u w/ apc
-4404.94
+5121.73
 
 ####
 # Benchmarked on i5 3570k @ 4.5GHz w/ 8GB memory on a ocz vertex 3 240GB ssd.
