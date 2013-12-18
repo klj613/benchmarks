@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CONTENT=$(cat ./$@/custom)
+
+sed "s/__CUSTOM__/$CONTENT/g" ./Dockerfile.dist > ./Dockerfile
+
+cp ./$@/app.ini ./app.ini
+sudo docker build -t="klj613_benchmark/symfony2:$@" .

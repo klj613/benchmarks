@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function get_port() {
+    sudo docker port $(sudo docker ps | grep -i $1 | awk '{print $1}') 80 | sed 's/^........//g'
+}
+
+function benchmark() {
+    ab -n 10000 -c 50 http://localhost:$1/ > $2/results.txt
+}
+
+benchmark $(get_port php55u_1) php55u_1
+sleep 60
+benchmark $(get_port php55u_2) php55u_2
+sleep 60
+benchmark $(get_port php55u_3) php55u_3
+sleep 60
+benchmark $(get_port php55u_4) php55u_4
+sleep 60

@@ -1,0 +1,1 @@
+RUN yum install -y nginx php55u php55u-fpm php55u-pecl-jsonc git php55u-pdo
