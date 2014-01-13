@@ -1,6 +1,0 @@
-#!/bin/bash
-
-./build php55u_1
-./build php55u_2
-./build php55u_3
-./build php55u_4

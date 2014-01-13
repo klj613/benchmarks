@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ../common.sh
+
+benchmark klj613_benchmark/symfony2 Symfony2
