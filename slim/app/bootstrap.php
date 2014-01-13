@@ -17,4 +17,12 @@ $app->notFound(
     }
 );
 
+$app->get(
+    '/json',
+    function () use ($app) {
+        $app->status(200);
+        $app->render('json.php');
+    }
+);
+
 $app->run();

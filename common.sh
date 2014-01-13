@@ -8,7 +8,7 @@ function benchmark() {
     echo "-------" >> `pwd`/../results.txt
     echo "$2" >> `pwd`/../results.txt
     echo "-------" >> `pwd`/../results.txt
-    ab -n 10000 -c 50 http://localhost:$PORT/ | grep -i 'Requests per second' | awk '{print $4}' >> `pwd`/../results.txt
+    ab -n 10000 -c 50 http://localhost:$PORT/$3 | grep -i 'Requests per second' | awk '{print $4}' >> `pwd`/../results.txt
     echo "" >> `pwd`/../results.txt
 
     echo 'Completed!'
