@@ -1,0 +1,39 @@
+<?php
+/* @var $this \Phavour\Runnable\View */
+?>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<?php echo $this->urlFor('docs.index'); ?>">Phavour <sup><u>docs</u></sup></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="<?php echo $this->urlFor('docs.index'); ?>">Docs Home</a></li>
+                <li><a href="<?php echo $this->urlFor('docs.quickStart'); ?>">Quick Start</a></li>
+                <li><a href="<?php echo $this->urlFor('docs.helloPhavour'); ?>">Hello Phavour!</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo $this->urlFor('docs.components.component', array('name' => 'booting-phavour')); ?>">Booting Phavour</a></li>
+                        <li class="divider"></li>
+                        <li><a href="<?php echo $this->urlFor('docs.components.component', array('name' => 'structuring-a-package')); ?>">Structuring a Package</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Request &amp; Response</li>
+                        <li><a href="<?php echo $this->urlFor('docs.components.component', array('name' => 'request')); ?>">Request</a></li>
+                        <li><a href="<?php echo $this->urlFor('docs.components.component', array('name' => 'response')); ?>">Response</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Config &amp; Routes</li>
+                        <li><a href="<?php echo $this->urlFor('docs.components.component', array('name' => 'config')); ?>">Config</a></li>
+                        <li><a href="<?php echo $this->urlFor('docs.components.component', array('name' => 'routes')); ?>">Routes</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
