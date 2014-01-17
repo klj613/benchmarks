@@ -1,5 +1,5 @@
 function benchmark() {
-    CONTAINER=$(sudo docker run -d -P $1)
+    CONTAINER=$(sudo docker run -d -P $1 /docker_bootstrap -n)
 
     sleep 1
 
